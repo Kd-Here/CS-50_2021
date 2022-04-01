@@ -7,3 +7,5 @@
 
 
 #Youtube Link:-https://www.youtube.com/watch?v=ky-24RvI57s
+
+#In python OOP is used i.e class is used to create custom data-type
