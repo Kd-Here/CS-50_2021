@@ -13,3 +13,7 @@ print(f"\mHello your average is {avg}")
 # How to change the name of commit using vscode put this is terminal
 # git commit --amend -m "Here give the new name or mssg for commit"
 #  git push --force origin master
+
+# Sort trick if you wanted to edit the message of any file or folder move to that and 
+#  click on git option below run and see source control there write mssg in Message
+# And then you can press ctrl + Enter and pop arise creaate blank commit yes then see
