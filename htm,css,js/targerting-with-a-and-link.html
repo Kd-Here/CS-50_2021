@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:51:30</title>
+    <style>
+        /* #Red{
+            color: red;
+        } */
+        /* a[href="https://www.harvard.edu/"]{
+            text-decoration: none;
+            color: red;
+        } */
+        /* This method is not ideal because if ther is something after the slash edu it will not show color */
+        a[href*="harvard.edu"]{
+            text-decoration: none;
+            color: red;
+        }
+        
+        /* #Cyan{
+            color: crimson;
+        } */
+        a[href*="mit.edu"]{
+            text-decoration: none;
+            color: crimson;
+        }
+        #Cyan:hover{
+            color: indigo;
+        }
+        #Red:hover{
+            color: magenta;
+        }
+        
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>    
+    <h1>Visit  <a href="https://www.harvard.edu/" id="Red">HARVARD</a> or <a href="https://www.mit.edu/" id="Cyan">MIT</a></h1>
+    Here were are giving html elements without using of html tags
+
+</body>
+ </html> 
