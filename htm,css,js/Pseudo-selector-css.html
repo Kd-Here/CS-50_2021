@@ -1,0 +1,49 @@
+<!-- Here we are seeing a way to target the particular element of html and changing it's css by calling it's element-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pesudo-classes</title>
+    <style>
+        p:first-line{
+            background-color: cyan;
+        }
+        /* This will mark all first line of p with cyan background */
+
+        p::first-letter{
+            font-size: larger;
+        }
+        p:first-child{
+            color: blueviolet;
+        }
+        p i{
+            color: indianred;
+            font-style: normal;
+            background-color: oldlace;
+        }
+        /* Check here we are giving same element of class a different css property wiht help of css pseudo selector */
+    </style>
+</head>
+<body>
+    <p>
+        This is first para or the first child of body.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste eligendi suscipit neque libero? Illo numquam dignissimos autem officiis aut tenetur minus in maxime.
+    </p>
+    <p>
+        This is seconf para or the 2nd child of body and sibling of first child.
+    </p>
+    <span>
+        <p>
+            this is 1st child of p which is span
+            <br>
+            <i>We are in Kd's land</i>
+        </p>
+        <div>
+            this is 2nd child of span
+        </div>
+    </span>
+</body>
+</html>
