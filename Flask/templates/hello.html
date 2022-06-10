@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi new webpage</title>
+  <link rel="stylesheet" href="donut.css">
+  <style>
+    :root {
+  --main_color: #10cab7;
+}
+
+html {
+  overflow-x : hidden;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  padding: 10px 5%;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://raw.githubusercontent.com/ElzeroWebSchool/HTML_And_CSS_Template_One/main/images/landing.jpg");
+  background-size: cover;
+  padding: 0px 20px;
+}
+
+.landing h1 {
+  color: var(--main_color);
+  font-size: 50px;
+}
+
+.landing p {
+  font-size: 20px;
+  line-height: 2;
+  word-spacing: 2px;
+}
+
+article svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--main_color);
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.idea {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.idea div {
+  width: 350px;
+  max-width: 400px;
+  height: 300px;
+  /* background-color: #ddd; */
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.idea p {
+  color: rgba(175, 175, 175, 0.867);
+  line-height: 2;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 100px;
+  color: rgba(224, 224, 224, 0.867);
+  margin-top: 30px;
+  margin-bottom: 0px;
+  letter-spacing: -5px;
+}
+
+.title div {
+  height: 200px;
+  flex-basis: 100%;
+  flex-shrink: 0;
+}
+
+.title p {
+  margin: 0px;
+  margin-top: -40px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: rgb(80, 80, 80);
+}
+
+/*in services*/
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+}
+
+.icon {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 40px;
+  color: #10cab7;
+}
+
+.icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content p {
+  color: rgba(134, 134, 134, 0.867);
+  font-size: 17px;
+}
+
+.image {
+  display: none;
+}
+
+.image img {
+  width: 250px;
+  height: 300px;
+  position: relative;
+  right: -60px;
+}
+
+/*Portfolio*/
+
+.gray {
+  background-color: #eee;
+}
+
+.portfolio {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: #eee;
+}
+
+.project {
+  max-width: 420px;
+  height: fit-content;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.project img {
+  width: 100%;
+  height: 70%;
+}
+
+.project h2,
+.project p {
+  padding: 0px 15px;
+}
+
+/*About*/
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+.about img {
+  width: 350px;
+  height: 400px;
+}
+
+.about p {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about p:last-of-type {
+  font-weight: 400;
+  color: rgba(66, 66, 66, 0.867);
+}
+
+.about p:first-of-type::after {
+  content: "";
+  display: block;
+  width: 200px;
+  border-bottom: 3px solid #10cab7;
+  position: relative;
+  top: 30px;
+  margin: auto;
+}
+
+/*contact*/
+.contact {
+  background-color: #eee;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact a,
+span {
+  color: var(--main_color);
+}
+
+.contact h2,
+.contact span {
+  font-weight: 700;
+}
+
+.contact a {
+  text-decoration: none;
+
+  margin-left: 5px;
+}
+
+.contact svg {
+  width: 20px;
+  height: 20px;
+  fill: #2c4755;
+  transform: translateY(5px);
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #2c4755;
+  color: #fff;
+  font-size: 18px;
+}
+
+footer p {
+  margin: 0px;
+}
+
+/*For Responsive*/
+
+@media (min-width: 1188px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .box {
+    width: 950px;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    border-right: 100px solid #2c4755;
+  }
+
+  .service {
+    flex-direction: row;
+  }
+
+  .icon {
+    display: block;
+    width: 50px;
+    flex-grow: 0;
+    height: inherit;
+  }
+
+  .icon svg,
+  .icon i {
+    position: relative;
+    top: 15px;
+  }
+
+  .content {
+    text-align: start;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  /*about*/
+  .about {
+    padding: 0px 20px;
+    flex-direction: row;
+  }
+}
+
+  </style>
+</head>
+
+  <body>
+    <header>
+      <img src="https://raw.githubusercontent.com/ElzeroWebSchool/HTML_And_CSS_Template_One/main/images/logo.png" />
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+      </svg>
+    </header>
+  
+    <div class="landing">
+      <div>
+        <h1>Hello There</h1>
+        <p>
+          We are Leon - Super Creative &<br />
+          Minimal Agency Web Template
+        </p>
+      </div>
+    </div>
+  
+    <article>
+      <section class="idea">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M248.8 4.994C249.9 1.99 252.8 .0001 256 .0001C259.2 .0001 262.1 1.99 263.2 4.994L277.3 42.67L315 56.79C318 57.92 320 60.79 320 64C320 67.21 318 70.08 315 71.21L277.3 85.33L263.2 123C262.1 126 259.2 128 256 128C252.8 128 249.9 126 248.8 123L234.7 85.33L196.1 71.21C193.1 70.08 192 67.21 192 64C192 60.79 193.1 57.92 196.1 56.79L234.7 42.67L248.8 4.994zM427.4 14.06C446.2-4.686 476.6-4.686 495.3 14.06L529.9 48.64C548.6 67.38 548.6 97.78 529.9 116.5L148.5 497.9C129.8 516.6 99.38 516.6 80.64 497.9L46.06 463.3C27.31 444.6 27.31 414.2 46.06 395.4L427.4 14.06zM461.4 59.31L356.3 164.3L379.6 187.6L484.6 82.58L461.4 59.31zM7.491 117.2L64 96L85.19 39.49C86.88 34.98 91.19 32 96 32C100.8 32 105.1 34.98 106.8 39.49L128 96L184.5 117.2C189 118.9 192 123.2 192 128C192 132.8 189 137.1 184.5 138.8L128 160L106.8 216.5C105.1 221 100.8 224 96 224C91.19 224 86.88 221 85.19 216.5L64 160L7.491 138.8C2.985 137.1 0 132.8 0 128C0 123.2 2.985 118.9 7.491 117.2zM359.5 373.2L416 352L437.2 295.5C438.9 290.1 443.2 288 448 288C452.8 288 457.1 290.1 458.8 295.5L480 352L536.5 373.2C541 374.9 544 379.2 544 384C544 388.8 541 393.1 536.5 394.8L480 416L458.8 472.5C457.1 477 452.8 480 448 480C443.2 480 438.9 477 437.2 472.5L416 416L359.5 394.8C354.1 393.1 352 388.8 352 384C352 379.2 354.1 374.9 359.5 373.2z" />
+          </svg>
+  
+          <h2>Tell Us Your Idea</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, eius
+            consequatur. Ab ipsum, hic architecto
+          </p>
+        </div>
+  
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+            <path d="M464 0H112c-4 0-7.8 2-10 5.4L2 152.6c-2.9 4.4-2.6 10.2.7 14.2l276 340.8c4.8 5.9 13.8 5.9 18.6 0l276-340.8c3.3-4.1 3.6-9.8.7-14.2L474.1 5.4C471.8 2 468.1 0 464 0zm-19.3 48l63.3 96h-68.4l-51.7-96h56.8zm-202.1 0h90.7l51.7 96H191l51.6-96zm-111.3 0h56.8l-51.7 96H68l63.3-96zm-43 144h51.4L208 352 88.3 192zm102.9 0h193.6L288 435.3 191.2 192zM368 352l68.2-160h51.4L368 352z" />
+          </svg>
+  
+          <h2>We Will Do All The Work</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, eius
+            consequatur. Ab ipsum, hic architecto
+          </p>
+        </div>
+  
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+            <path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm-11.34 240.23c-2.89 4.82-8.1 7.77-13.72 7.77h-.31c-4.24 0-8.31 1.69-11.31 4.69l-5.66 5.66c-3.12 3.12-3.12 8.19 0 11.31l5.66 5.66c3 3 4.69 7.07 4.69 11.31V304c0 8.84-7.16 16-16 16h-6.11c-6.06 0-11.6-3.42-14.31-8.85l-22.62-45.23c-2.44-4.88-8.95-5.94-12.81-2.08l-19.47 19.46c-3 3-7.07 4.69-11.31 4.69H50.81C49.12 277.55 48 266.92 48 256c0-110.28 89.72-200 200-200 21.51 0 42.2 3.51 61.63 9.82l-50.16 38.53c-5.11 3.41-4.63 11.06.86 13.81l10.83 5.41c5.42 2.71 8.84 8.25 8.84 14.31V216c0 4.42-3.58 8-8 8h-3.06c-3.03 0-5.8-1.71-7.15-4.42-1.56-3.12-5.96-3.29-7.76-.3l-17.37 28.95zM408 358.43c0 4.24-1.69 8.31-4.69 11.31l-9.57 9.57c-3 3-7.07 4.69-11.31 4.69h-15.16c-4.24 0-8.31-1.69-11.31-4.69l-13.01-13.01a26.767 26.767 0 0 0-25.42-7.04l-21.27 5.32c-1.27.32-2.57.48-3.88.48h-10.34c-4.24 0-8.31-1.69-11.31-4.69l-11.91-11.91a8.008 8.008 0 0 1-2.34-5.66v-10.2c0-3.27 1.99-6.21 5.03-7.43l39.34-15.74c1.98-.79 3.86-1.82 5.59-3.05l23.71-16.89a7.978 7.978 0 0 1 4.64-1.48h12.09c3.23 0 6.15 1.94 7.39 4.93l5.35 12.85a4 4 0 0 0 3.69 2.46h3.8c1.78 0 3.35-1.18 3.84-2.88l4.2-14.47c.5-1.71 2.06-2.88 3.84-2.88h6.06c2.21 0 4 1.79 4 4v12.93c0 2.12.84 4.16 2.34 5.66l11.91 11.91c3 3 4.69 7.07 4.69 11.31v24.6z" />
+          </svg>
+  
+          <h2>Your Product is Worldwide</h2>
+  
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, eius
+            consequatur. Ab ipsum, hic architecto
+          </p>
+        </div>
+      </section>
+  
+      <section class="title">
+        <div>
+          <h1>Services</h1>
+          <p>Don't be busy, be productive</p>
+        </div>
+      </section>
+  
+      <!-- services -->
+      <section class="container">
+        <section class="box">
+          <!-- 1st Service -->
+          <div class="service">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M512 255.1C512 256.9 511.1 257.8 511.1 258.7C511.6 295.2 478.4 319.1 441.9 319.1H344C317.5 319.1 296 341.5 296 368C296 371.4 296.4 374.7 297 377.9C299.2 388.1 303.5 397.1 307.9 407.8C313.9 421.6 320 435.3 320 449.8C320 481.7 298.4 510.5 266.6 511.8C263.1 511.9 259.5 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256V255.1zM96 255.1C78.33 255.1 64 270.3 64 287.1C64 305.7 78.33 319.1 96 319.1C113.7 319.1 128 305.7 128 287.1C128 270.3 113.7 255.1 96 255.1zM128 191.1C145.7 191.1 160 177.7 160 159.1C160 142.3 145.7 127.1 128 127.1C110.3 127.1 96 142.3 96 159.1C96 177.7 110.3 191.1 128 191.1zM256 63.1C238.3 63.1 224 78.33 224 95.1C224 113.7 238.3 127.1 256 127.1C273.7 127.1 288 113.7 288 95.1C288 78.33 273.7 63.1 256 63.1zM384 191.1C401.7 191.1 416 177.7 416 159.1C416 142.3 401.7 127.1 384 127.1C366.3 127.1 352 142.3 352 159.1C352 177.7 366.3 191.1 384 191.1z" />
+              </svg>
+            </div>
+            <div class="content">
+              <h2>Graphic design</h2>
+              <p>
+                Graphic design is the process of visual communication and
+                problem-solving using one or more of thypography, photography
+                and illustrarion.
+              </p>
+            </div>
+          </div>
+  
+          <!-- 2nd Service -->
+          <div class="service">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M128 384H352V448H128C92.65 448 64 419.3 64 384V128H32C14.33 128 0 113.7 0 96C0 78.33 14.33 64 32 64H64V32C64 14.33 78.33 0 96 0C113.7 0 128 14.33 128 32V384zM384 128H160V64H384C419.3 64 448 92.65 448 128V384H480C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H448V480C448 497.7 433.7 512 416 512C398.3 512 384 497.7 384 480V128z" />
+              </svg>
+            </div>
+            <div class="content">
+              <h2>Web design</h2>
+              <p>
+                Web design encompasses many different skills and disciplines in
+                the production and maintenance of websites.
+              </p>
+            </div>
+          </div>
+  
+          <!-- 3rd Service -->
+          <div class="service">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M27.5 162.2L9 187.1h90.5l6.9-130.7-78.9 105.8zM396.3 45.7L267.7 32l135.7 147.2-7.1-133.5zM112.2 218.3l-11.2-22H9.9L234.8 458zm2-31.2h284l-81.5-88.5L256.3 33zm297.3 9.1L277.6 458l224.8-261.7h-90.9zM415.4 69L406 56.4l.9 17.3 6.1 113.4h90.3zM113.5 93.5l-4.6 85.6L244.7 32 116.1 45.7zm287.7 102.7h-290l42.4 82.9L256.3 480l144.9-283.8z" />
+              </svg>
+            </div>
+            <div class="content">
+              <h2>UI & UX</h2>
+              <p>
+                Process of enhancing user satisfaction with a product by
+                improving the usability, accessibility, and pleasure provided in
+                the interaction.
+              </p>
+            </div>
+          </div>
+  
+          <!-- 4th Service -->
+          <div class="service">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path d="M0 464V48C0 21.49 21.49 0 48 0H144C170.5 0 192 21.49 192 48V96H112C103.2 96 96 103.2 96 112C96 120.8 103.2 128 112 128H192V192H112C103.2 192 96 199.2 96 208C96 216.8 103.2 224 112 224H192V288H112C103.2 288 96 295.2 96 304C96 312.8 103.2 320 112 320H192V400C192 408.8 199.2 416 208 416C216.8 416 224 408.8 224 400V320H288V400C288 408.8 295.2 416 304 416C312.8 416 320 408.8 320 400V320H384V400C384 408.8 391.2 416 400 416C408.8 416 416 408.8 416 400V320H464C490.5 320 512 341.5 512 368V464C512 490.5 490.5 512 464 512H48C23.15 512 2.706 493.1 .2477 468.9C.0838 467.3 0 465.7 0 464z" />
+              </svg>
+            </div>
+            <div class="content">
+              <h2>Web Development</h2>
+              <p>
+                Web development is a broad term for the work involved in
+                developing a web site for the Internet or an intranet.
+              </p>
+            </div>
+          </div>
+        </section>
+  
+        <section class="image">
+          <img src="https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_One/blob/main/images/services.jpg?raw=true" />
+        </section>
+      </section>
+  
+      <section class="title gray">
+        <h1>Portfolio</h1>
+        <p>If you do it right, it will last forever.</p>
+      </section>
+  
+      <section class="portfolio">
+        <div class="project">
+          <img src="https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_One/blob/main/images/portfolio-1.jpg?raw=true" />
+          <h2>Project Here</h2>
+          <p>
+            My creative ability is very difficult to measure because it can
+            manifest in so many surprising and.
+          </p>
+        </div>
+  
+        <!-- 2nd project -->
+        <div class="project">
+          <img src="https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_One/blob/main/images/portfolio-2.jpg?raw=true" />
+          <h2>Project Here</h2>
+          <p>
+            My creative ability is very difficult to measure because it can
+            manifest in so many surprising and.
+          </p>
+        </div>
+  
+        <!-- 3rd project -->
+        <div class="project">
+          <img src="https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_One/blob/main/images/portfolio-3.jpg?raw=true" />
+          <h2>Project Here</h2>
+          <p>
+            My creative ability is very difficult to measure because it can
+            manifest in so many surprising and.
+          </p>
+        </div>
+      </section>
+  
+      <section class="title">
+        <h1>About</h1>
+        <p>Less is more work.</p>
+      </section>
+      <section class="about">
+        <img src="https://github.com/ElzeroWebSchool/HTML_And_CSS_Template_One/blob/main/images/about.jpg?raw=true" />
+        <div class="paragraphs">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+            officiis nesciunt laudantium hic, labore dolorum molestiae adipisci
+            tempore reiciendis fuga non sequi voluptate quae quidem, numquam
+            assumenda incidunt, earum voluptatum!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+            officiis nesciunt laudantium hic, labore dolorum molestiae adipisci
+            tempore reiciendis fuga non sequi voluptate quae quidem, numquam
+            assumenda incidunt, earum voluptatum!
+          </p>
+        </div>
+      </section>
+  
+      <!-- contact -->
+      <section class="title gray">
+        <h1>Contact</h1>
+        <p>We are born to create</p>
+      </section>
+  
+      <section class="contact">
+        <h2>
+          Feel free to drop us a line at: <br />
+          <a href="#">leonagency@mail.com</a>
+        </h2>
+        <p>
+          Find Us On Social Networks
+  
+          <!-- Youtube -->
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+            </svg>
+          </a>
+          <!-- Facebook -->
+  
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+            </svg>
+          </a>
+          <!-- Twitter -->
+  
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+            </svg>
+          </a>
+        </p>
+      </section>
+    </article>
+  
+    <footer>
+      <p>&copy; 2022 <span>Lean</span> All Right Reserved</p>
+    </footer>
+</body>
+</html>
