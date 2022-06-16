@@ -12,8 +12,9 @@ app=Flask(__name__)
 
 
 def index(): 
-    name=request.args.get("name")#This is taking a argument from user which user put afters /?name=
-    return render_template("index.html",nam=name)
+    #yourname=request.args.get("nav")#This is taking a argument from user which user put afters /?nav=
+    #return render_template("index.html",nam=yourname) #This is code if there is argument and we pass it through return commnad.
+    return render_template("index.html") #This is code if there is no argument
 #So far we created a fucniton index when user call this function it's simply 
 # render i.e prints the index.html file to user screen 
 
@@ -29,3 +30,13 @@ def asd():
 @app.route("/hello")
 def hel():
     return render_template("/hello.html")
+
+
+@app.route("/form")
+def form():
+    return render_template("fo.html")
+
+@app.route("/greet")
+def gre():
+    tname=request.args.get("username")    
+    return render_template("greeting.html",na=tname)
