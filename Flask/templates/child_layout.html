@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+<!-- This is used to extend the layout html file. 
+Child is used to extend the parent templates -->
+
+
+{% block body %}
+    <form method="get" action="greeta">
+        Name <input autocomplete="off" autofocus name="username" placeholder="HEIE" type="text" id="into">
+    <br><br>
+        Email <input type="email" name="Email" id="kd">
+        <input type="submit" value="Filled form">
+    </form>
+{% endblock %}

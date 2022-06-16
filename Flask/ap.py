@@ -5,7 +5,7 @@ app=Flask(__name__)
 #__name__ reffers to name of current which simply guiding flask that turn this file whatever is name into flask application
 
 
-@app.route("/") #This is know as decorator in python 
+@app.route("/") #This is    know as decorator in python 
 #This @app.route is just saying when the index function will be called. 
 
 
@@ -40,3 +40,24 @@ def form():
 def gre():
     tname=request.args.get("username")    
     return render_template("greeting.html",na=tname)
+
+
+@app.route("/ext")
+def lay():
+    return render_template("child_layout.html")
+
+@app.route("/greeta")
+def greeta():
+    tname=request.args.get("username")    
+    return render_template("child_greet.html",na=tname)
+
+#WE can also have post method for route app
+# @app.route("/greeta", methods=["POST"])
+# def greeta():
+#     return render_template("child_greet.html")
+#Don't forget to make form method post.
+
+
+
+
+
