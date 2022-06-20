@@ -1,0 +1,11 @@
+#sf{
+    margin-top: 40px;
+    font-size: larger;
+}
+.par{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: rgb(151, 222, 58);
+}

@@ -2,15 +2,39 @@
 
 {%block body%}
 
-    <h1>Register with Us</h1>
+
     <form action="/register" method="POST">
-        <input autocomplete="off" autofocus name="name" placeholder="Your Name" type="text">
+            <div class="par">
+                <a href="https://www.stanford.edu/">
+                <img src="/static/98cf7d6d899badc5d9752a12d6e97209.png" alt="" width="385px" height="230px" >  
+            </a> 
+            <div id="sf">
+                <span>Don't Waste</span>
+                <br>
+                <span>The most important assest</span><br>
+                <span>Time</span>
+            </div>    
+            </div>
+            <h1>Stanford Playing Sport welcome's u</h1>
+            <h2>Register with Us</h2>
+            <input autocomplete="off" autofocus name="name" placeholder="Your Name" type="text">
+         <!-- 
         <select name="sport">
+            
+             Rememeber the name we are using is key value pair for every input given by user is stored in key value format
             <option disable selected> Sports</option>
             <option>Football</option>
             <option>Baseball</option>
-            <option>Volleyball</option>
-        </select> 
+            <option>Volleyball</option> 
+             We are chainging it bcoz of trying easy method  -->
+
+
+            {%for sport in sports%}
+            <input name="sport" autofocus type ="radio" value="{{s}}">
+                {{sport}}
+ 
+            {%endfor%}
+        <!--</select>  -->
         <button name="update" type="submit" value="Register">Register </button>
     </form>
 {% endblock  %}
