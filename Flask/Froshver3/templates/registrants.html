@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+
+{%block body%}
+<h1>Player who registered with us</h1>
+<h1>Sports selected</h1>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Sports</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for name in registrants%}  <!-- This is for loop in jingar syntax -->
+      <tr>        
+        <th scope="row">{{loop.index}},{{ad}}</th>
+        <td>{{name}}</td>
+        <td>{{registrants[name]}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+{%endblock%} 

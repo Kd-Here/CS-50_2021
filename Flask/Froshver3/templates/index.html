@@ -1,6 +1,18 @@
 {%extends "layout.html"%}
 
 {%block body%}
+<form action="/register" method="POST">
+    
+    <h1>Stanford Playing Sport welcome's u</h1>
+    <h2>Register with Us</h2>
+    <br>
+    <input autocomplete="off" autofocus name="name" placeholder="Your Name" type="text">
 
-
+        {%for sport in sports%}
+                <input name="sport" autofocus type ="radio" value="{{sport}}">
+                    {{sport}}
+    
+        {%endfor%}
+    <button name="update" type="submit" value="Register">Register </button>
+    </form>
 {%endblock%}
