@@ -1,5 +1,7 @@
 #In this we are storing user data i.e their name and choice of sport selected, if wrongly submitted report them with error message i.e html page
 
+
+from cs50 import SQL
 from flask import Flask, render_template, request, redirect
 app=Flask(__name__)
 
