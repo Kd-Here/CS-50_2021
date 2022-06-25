@@ -68,7 +68,7 @@ HTML=MIMEText(html_Content,'html')
 
 
 # Here we are adding attachment which will be included in mail.
-file_name="attached.gif"
+file_name="hed.gif"
 file_part=MIMEApplication(open(file_name,"rb").read(),Name=file_name)
 file_part['Content-Disposition']='attachment; file_name="%s' % file_name
 

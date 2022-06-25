@@ -26,7 +26,7 @@ oas['To'] = RECIPIENT_ADDRESS
 oas['Subject'] = "Checking Python Automation Mail features."
 
 # Creating a The content for email which is mimetext part
-content_Automated_Mail = MIMEText("This is Automated mail from Kds welcome to our group. Thanks for been a part of this family",'plain')
+content_Automated_Mail = MIMEText("This is Automated mail from Kds welcome to our group! Thanks for been a part of this family",'plain')
 
 
 oas.attach(content_Automated_Mail)

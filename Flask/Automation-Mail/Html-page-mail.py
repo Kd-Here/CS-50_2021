@@ -60,7 +60,7 @@ html_Content = """<!DOCTYPE html>
         <h2>We are Thanking you to be part of Kd's </h2>
     </span>
 </body>
-</html>"""
+</html> """
 
 HTML=MIMEText(html_Content,'html')
 
