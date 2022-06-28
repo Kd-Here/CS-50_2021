@@ -1,0 +1,26 @@
+{%extends "layout.html"%}
+
+
+{%block body%}
+
+<h1>Login with Us</h1>
+<!-- 
+<a href = "/login">login</a><br>  
+<a href = "/profile">view profile</a><br>  
+<a href = "/logout">Log out</a><br>   -->
+
+
+
+<form action="http://localhost:5000/success"" method="post">
+    <label for="12">Enter your name :--</label>
+    <input autocomplete="off" autofocus id="12" name="name" placeholder="Your Name" type="text">
+    <br>
+    <label for="14">Enter your Mail :--</label>
+    <input type = 'email' name = 'email'>
+    <br>
+    <label for="age">Enter your age:--</label>
+    <input type="number" id="age" name="quantity" min="18" max="90">
+    <br>
+    <button type="submit">Submit details</button>
+</form>
+{% endblock %}

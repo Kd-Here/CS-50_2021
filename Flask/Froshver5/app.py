@@ -30,7 +30,7 @@ mail = Mail(app)
 SPORTS = [
     "Basketball",
     "Soccer",
-    "Ultimate Frisbee"
+    "Ultimate Frisbee" 
 ]
 
 
