@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+
+{%block body%}
+
+<form action="/" method="post">
+Logged in successfully:-
+
+Hello {{user_name}}
+<!-- User name is variabel created using jingar so inside {{}} which was provided as argument along with render render!-->
+or its the <br>
+<br><br><br>
+<h1>If you wanted to logout:- <button type="submit">Logut</button></h1>
+</form>
+{%endblock%}
