@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    {% if session.model %}
+        You are logged in as {{ session.model }}.
+        <br>
+        <hr>
+        <h1> Check your books :-</h1>
+        <form action="/bookscollection" method="get, post">
+            <button type="submit">Check our books</button>
+        </form>
+        <hr>
+        <h1>Logout using the link :-<a href="/logout"> Log out</a></h1>
+        <hr>
+
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
+
+{% endblock %}
