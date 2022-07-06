@@ -1,0 +1,24 @@
+{%extends "layout.html"%}
+
+
+{%block body%}
+<table>
+    <thead>
+       <td>Name</td>
+       <td>Address</td>
+       <td>city</td>
+       <td>Pincode</td>
+    </thead>
+    
+    {% for row in rows %}
+       <tr>
+          <td>{{row["nav"]}}</td>
+          <td>{{row["addd"]}}</td>
+          <td> {{ row["cito"]}}</td>
+          <td>{{row['pinto']}}</td>	
+       </tr>
+    {% endfor %}
+ </table>
+ 
+ <a href = "/">Go back to home page</a>
+ {% endblock %}
