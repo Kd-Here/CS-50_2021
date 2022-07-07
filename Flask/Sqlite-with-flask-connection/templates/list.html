@@ -2,23 +2,34 @@
 
 
 {%block body%}
-<table>
+<table class="table table-dark">
     <thead>
-       <td>Name</td>
-       <td>Address</td>
-       <td>city</td>
-       <td>Pincode</td>
+      <tr>
+         <th scope="col">#</th>
+         <th scope="col">City</th>
+         <th scope="col">Name</th>
+         <th scope="col">Address</th>
+         <th scope="col">Pincode</th>
+     </tr>
     </thead>
     
-    {% for row in rows %}
-       <tr>
-          <td>{{row["nav"]}}</td>
-          <td>{{row["addd"]}}</td>
-          <td> {{ row["cito"]}}</td>
-          <td>{{row['pinto']}}</td>	
-       </tr>
-    {% endfor %}
- </table>
+
+<tbody>
+   
+   {% for row in rows %}
+   <tr>
+      <th>{{loop.index}}</th>
+      <td>{{row["nav"] }}</td>
+      <td>{{row["addd"] }}</td>
+      <td> {{ row["cito"] }}</td>
+      <td>{{row['pint'] }}</td>	
+   </tr>
+   {% endfor %}
+</tbody>    
+</table>
  
- <a href = "/">Go back to home page</a>
- {% endblock %}
+<form action="/" method="post">
+<button type="submit">New Members</button>
+</form>
+
+{% endblock %}

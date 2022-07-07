@@ -1,13 +1,13 @@
 # https://pythonbasics.org/flask-sqlite/
 
+from flask import Flask, render_template, request, redirect
 import sqlite3
 import sqlite3 as sql
 
 coa=sqlite3.connect('info.db')
-coa.execute('CREATE TABLE students (nav TEXT, addd TEXT, cito TEXT, pinto TEXT)')
+coa.execute('CREATE TABLE studant (nav TEXT, addd TEXT, cito TEXT, pinto TEXT)')
 coa.close()
 
-from flask import Flask, render_template, request
  
 # Flask constructor takes the name of
 # current module (__name__) as argument.
@@ -32,12 +32,12 @@ def are():
             nav=request.form['nav']
             addd=request.form['pata']
             cito=request.form['city']
-            pinto=request.form['pin']
+            pint=request.form['pin']
         
 
             with sql.connect('info.db') as con:
                 cur=con.cursor()
-                cur.execute("INSERT INTO students (nav,addr,city,pin) VALUES (?,?,?,?)",(nav,addd,cito,pinto))
+                cur.execute("INSERT INTO studant (nav,addd,cito,pinto) VALUES (?,?,?,?)",(nav,addd,cito,pint))
 
                 con.commit()
                 msg="recorded successfully added!"
@@ -55,7 +55,7 @@ def list():
    con.row_factory = sql.Row
    
    cur = con.cursor()
-   cur.execute("select * from students")
+   cur.execute("select * from studant")
    
    rows = cur.fetchall(); 
    return render_template("list.html",rows = rows)
