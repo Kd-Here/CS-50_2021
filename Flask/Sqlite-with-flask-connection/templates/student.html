@@ -1,9 +1,9 @@
-{%extends "layout.html"%}
+ {%extends "layout.html"%}
 
 
 {%block body%}
 <h1>
-    Student Information:-
+    Student Information:-{{mgg}}
 </h1>
 <form action="/storeinfo" method="post">
     <label for="name">Enter your full name:-</label>
@@ -15,7 +15,7 @@
     <label for="Pin">Pincode:-</label>
     <input type = "text" name = "pin" placeholder="Yourp"><br><br>
 
-    <button type="submit">Store details</button>
+    <button class="button" type="submit">Store details</button>
 </form>
 
 

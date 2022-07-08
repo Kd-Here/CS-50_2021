@@ -3,6 +3,11 @@ from flask import Flask, render_template, request
 app=Flask(__name__)
 #__name__ reffers to name of current which simply guiding flask that turn this file whatever is name into flask application
 
+import sqlite3
+print("\n",dir(sqlite3))
+
+import sqlite3 as sq
+print("\n",dir(sq))
 
 @app.route("/") #This is    know as decorator in python 
 #This @app.route is just saying when the index function will be called. 

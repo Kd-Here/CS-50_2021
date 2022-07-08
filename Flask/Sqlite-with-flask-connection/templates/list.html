@@ -1,3 +1,4 @@
+
 {%extends "layout.html"%}
 
 
@@ -22,14 +23,14 @@
       <td>{{row["nav"] }}</td>
       <td>{{row["addd"] }}</td>
       <td> {{ row["cito"] }}</td>
-      <td>{{row['pint'] }}</td>	
+      <td>{{row['pinto']}}</td>	
    </tr>
    {% endfor %}
 </tbody>    
 </table>
  
 <form action="/" method="post">
-<button type="submit">New Members</button>
+<button class="button" type="submit">New Members</button>
 </form>
 
 {% endblock %}

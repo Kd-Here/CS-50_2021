@@ -1,8 +1,14 @@
 # https://pythonbasics.org/flask-sqlite/
 
+from crypt import methods
+from pickle import GET
 from flask import Flask, render_template, request, redirect
 import sqlite3
 import sqlite3 as sql
+# Here we are assinging sqlite3 module as sql variable which then have property and function of sqlite3 if needed you can check it with print(dir(sql))
+
+
+
 
 coa=sqlite3.connect('info.db')
 coa.execute('CREATE TABLE studant (nav TEXT, addd TEXT, cito TEXT, pinto TEXT)')
@@ -16,7 +22,7 @@ app = Flask(__name__)
 # The route() function of the Flask class is a decorator,
 # which tells the application which URL should call
 # the associated function.
-@app.route('/')
+@app.route('/',methods=['POST','GET'])
 def login():
     return render_template('index.html')
 
@@ -32,12 +38,12 @@ def are():
             nav=request.form['nav']
             addd=request.form['pata']
             cito=request.form['city']
-            pint=request.form['pin']
+            pinto=request.form['pin']
         
 
             with sql.connect('info.db') as con:
                 cur=con.cursor()
-                cur.execute("INSERT INTO studant (nav,addd,cito,pinto) VALUES (?,?,?,?)",(nav,addd,cito,pint))
+                cur.execute("INSERT INTO studant (nav,addd,cito,pinto) VALUES (?,?,?,?)",(nav,addd,cito,pinto))
 
                 con.commit()
                 msg="recorded successfully added!"
@@ -48,7 +54,7 @@ def are():
         finally:
             return render_template('result.html',mgg=msg)
             con.close()
-
+    
 @app.route('/list')
 def list():
    con = sql.connect("info.db")
@@ -60,6 +66,4 @@ def list():
    rows = cur.fetchall(); 
    return render_template("list.html",rows = rows)
 
-@app.route('/')
-def home():
-   return render_template('index.html')
+
