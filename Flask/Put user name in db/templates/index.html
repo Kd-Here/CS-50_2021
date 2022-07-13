@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<h1>Register your name with us!</h1>
+
+<form action="/register" method="post">
+    <label for="nam">Enter your name :- </label>
+    <input autocomplete="off" autofocus name="name" placeholder="YourName" type="text">
+    <button type="submit">store info</button>
+
+
+</form>
+
+
+{% endblock %}

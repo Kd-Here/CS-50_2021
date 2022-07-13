@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>
+    Data showing your enetered name with index number:-
+</h1>
+{%for i in registered %}
+<ul>
+
+    <li>
+        {{i.index_numbe}}
+        {{i.name}}
+    </li>
+</ul>
+
+
+{%endfor%}
+
+{% endblock %}
