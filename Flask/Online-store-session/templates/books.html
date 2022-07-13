@@ -5,18 +5,19 @@
 <h3>If you wanted to see your cart!</h3>
 <a href="/show">TaketoCart</a>
 
-
+<hr style="background-color: black; color: black;">
+<br>
 <form action="/show" method="post">
     <h1>Harry Potter 1</h1>
-    <button id="showing" value="1" type="submit">Add to cart</button>
+    <button onclick="mycli()" id="showing" value="1" type="submit">Add to cart</button>
 </form>
-<form action="/show">
+<form action="/show" method="pxost">
     <h1>Harry Potter 2</h1>
-    <button type="submit">Add to cart</button>
+    <button  onclick="ag()" type="submit">Add to cart</button>
 </form>
-<form action="/show">
+<form action="/show" method="post">
     <h1>Harry Potter 3</h1>
-    <button type="submit">Add to cart</button>
+    <button onclick="aga()" type="submit">Add to cart</button>
 </form>
 <form action="/show">
     <h1>Harry Potter 4</h1>
@@ -34,6 +35,30 @@
     <h1>Harry Potter 7</h1>
     <button type="submit">Add to cart</button>
 </form>
+<script>
+    mycli=()=>{
+
+        localStorage.setItem('1', 'coke');
+        console.log('hi');
+
+    }
+    function ag() {
+        localStorage.setItem('2','cefga');
+        console.log('bye');
+        
+    }
+
+    ag=()=>{
+        localStorage.setItem('3','Diet coke');
+        console.log('hia');
+    }
+
+    const greetingValue = localStorage.getItem('1');
+  console.log(greetingValue);
+
+    let a=document.getElementById('showing').value;
+    console.log(a);
+</script>
 
 
 {%endblock%}

@@ -1,7 +1,39 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <h1>Hi we are welcoming you for @Facebook</h1>
+
+
+<h1 style="background-color: rgb(36, 36, 86); font-size: 30px; text-align: center;">Here all books which you buyed will be shown here!:-</h1>
+
+
+
+
+<form action="/logout" method="post" class="bg-white rounded-md shadow-2xl p-5" method="post">
+  <button type="submit">Logout</button>
+</form>
+
+
+
+
+<p id="id"></p>
+<p id="id2"></p>
+<p id="id3"></p>
+<script>
+    const greetingValue = localStorage.getItem('1');
+    document.getElementById('id').innerHTML=greetingValue;
+    console.log(greetingValue);
+    
+    const g = localStorage.getItem('2');
+    document.getElementById('id2').innerHTML=g;
+    console.log(g);
+
+    const aga = localStorage.getItem('3');
+    document.getElementById('id3').innerHTML=aga;
+    console.log(aga);
+
+    
+
+</script>
 
 
 
