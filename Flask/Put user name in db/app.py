@@ -17,7 +17,7 @@ def padf():
 @app.route("/register",methods=["POST"])
 def registered():
     # TO get data from user which submits by form 
-    req=request.form.get('name')
+    req=request.form.get('nam')
     db.execute('INSERT INTO first (name) VALUES (?)',req)
     return redirect('/sub')
 

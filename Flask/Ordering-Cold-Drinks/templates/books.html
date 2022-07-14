@@ -1,0 +1,33 @@
+{%extends "layout.html"%}
+
+{%block body%}
+<h1>List of drinks avilable :-</h1>
+
+<form action="/remove">
+    <button type="submit">Empty Cart</button>
+</form>
+
+<form action="/show" method="post">
+    <button type="submit">Check Cart</button>
+</form>
+
+<hr>
+<br>
+
+
+{%for i in showing_ba %}
+    <form action="/sf", method="post">
+        <input name="product" readonly  value="{{i}}">
+        <!-- This is for displaying names -->
+        <button type="submit">Add to Cart</button>
+        <br>
+        <br>
+    </form>
+    {%endfor%}
+
+    
+
+        
+
+
+{%endblock%}

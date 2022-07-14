@@ -1,1 +1,162 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<nav class="bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+          
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block lg:hidden h-9 w-auto" src="https://www.pngall.com/wp-content/uploads/13/Pepsi-Logo-Old-PNG-Photo.png"  alt="Workflow">
+            <img class="hidden lg:block h-8 w-auto" src="https://www.pngall.com/wp-content/uploads/13/Pepsi-Logo-Old-PNG-Photo.png" alt="Workflow">
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="Showcatlog" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" >Products</a>
+  
+              <a href="bookscollection" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Shops</a>
+  
+              <a href="singup" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Singup</a>
+  
+              <a href="login" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login </a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          
+          <!-- Profile dropdown -->
+          <div class="ml-3 relative">
+            <div>
+              <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img style="width: 120px; height: 60px;" src="https://www.citypng.com/public/uploads/small/316255977074tduomnq3zhlv48ncyv8ucsrsioewqyhgbe2hekqfbp7c8n708vfzvxteqkq8bdaxjvw2bnzekrjeafterkwhz9ek025c5g6jvtt.png">   
+                </button>
+            </div>
+  
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+      </div>
+    </div>
+  </nav>
+  
+
+<h1  style="text-align: center; font-size: 100px;">Buy our new pepsi drink and enjoy your time!</h1>
+
+<div class="promotion__container  promotion__right">
+    <div style="    margin-top: 42px;    margin-bottom: 133px;">
+      <section id="2" class= "flex flex-row">
+
+        <img src="https://www.pepsi.com/en-us/uploads/images/nitro/PEP_NItro_DraftCola_Can.png" width="200px" height="360px" style="margin-left: 63px;">
+        <img src="https://www.pepsi.com/en-us/uploads/images/Diet-Pepsi-v2_12oz.png?mtime=20180215173735"width="200px" height="360px">
+        <img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi-zero-sugar.png" width="200px" height="360px">
+        <img src="https://www.pepsi.com/en-us/uploads/images/nitro/PEP_NItro_DraftCola_Can_Vanilla.png" width="200px" height="360px">
+        <img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi-zero-sugar-mango.png" width="200px" height="360px">
+        <img src="https://www.pepsi.com/en-us/uploads/images/Diet-Pepsi-Cherry-v3_12oz.png?mtime=20180215173734" height="360px" width="200px">
+        <img src="https://www.pepsi.com/en-us/uploads/images/can-pepsi-mango.png" width="200px" height="360px" >
+      </section>
+      </div>
+    
+
+
+    <footer class="text-center text-white" style="background-color: #121415;">
+        <div class="container p-6">
+          <div class="grid lg:grid-cols-6 md:grid-cols-3 gap-4">
+            <div class="lg:mb-0 mb-6">
+              <img
+              src="https://www.planetware.com/wpimages/2020/01/india-in-pictures-beautiful-places-to-photograph-taj-mahal.jpg"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+              src="data:image/jpeg;base64,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"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright:
+          <a class="text-white" href="https://tailwind-elements.com/">Served all across the globe</a>
+        </div>
+      </footer> 
+    
+
+      <h1 style="text-align: center; font-size: 50px;"> we are debbuggin ghere don't visit here</h1>
+    {% if session.model %}
+        You are logged in as {{ session.model }}.
+        <br>
+        <hr>
+        <h1> Check your books :-</h1>
+        <form action="/bookscollection" method="get, post">
+            <button type="submit">Check our books</button>
+        </form>
+        <hr>
+        <h1>Logout using the link :-<a href="/logout"> Log out</a></h1>
+        <hr>
+
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
+
+{% endblock %}
 

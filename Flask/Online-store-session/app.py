@@ -54,6 +54,7 @@ def shod():
 
 
 
+# SHowing buyed products
 @app.route('/show', methods=["GET", "POST"])
 def show_cart_content():
     return render_template('show.html')

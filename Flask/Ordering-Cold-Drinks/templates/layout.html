@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <title>Online buying Pepsi to your place</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            html {
+  scroll-behavior: smooth;
+}
+.fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 10px; 
+    padding: 20px;
+}
+.roundedFixedBtn{
+  height: 60px;
+  line-height: 80px;  
+  width: 60px;  
+  font-size: 2em;
+  font-weight: bold;
+  color: rgb(7, 6, 6);
+  text-align: center;
+  cursor: pointer;
+}
+        </style>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
