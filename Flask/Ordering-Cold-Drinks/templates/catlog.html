@@ -10,6 +10,7 @@
         <span style="margin-left: 0px;" class="ml-3 text-xl">Pespi Store</span>
       </a>
       <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+        <!-- <button>{{session.name}}</button> -->
         <a href="/Showcatlog#n1" style="cursor: pointer;" class="mr-5 hover:text-gray-900"><b>NITRO PEPSI</b></a>
         <a  href="/Showcatlog#n2" style="cursor: pointer;" class="mr-5 hover:text-gray-900"><b>DIET PEPSI</b></a>
         <a href="/Showcatlog#n3" style="cursor: pointer;" class="mr-5 hover:text-gray-900"><b>BLACK PEPSI</b></a>
@@ -92,6 +93,11 @@
 
   <a class="fixedButton" href="/MyCart">
     <div class="roundedFixedBtn"><i class="fa fa-phone"><img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt=""></i></div>
+    <span style="margin-left: 60%">
+      <b>
+        {{session.name}}
+      </b>
+    </span>
    </a>
 
 

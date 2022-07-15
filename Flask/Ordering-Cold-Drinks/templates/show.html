@@ -2,12 +2,25 @@
 
 {% block body %}
 
+<header style=" z-index: 3; background-color: rgb(36, 36, 86); font-size: 30px;">
+    <nav class=" flex flex-wrap items-center ">
+        <b>Here are all your products:- </b>
 
-<h1  style=" z-index: 3; background-color: rgb(36, 36, 86); font-size: 30px; text-align: center;">Here all books which you buyed will be shown here!:-</h1>
+        <form class="absolute top-0 right-10 h-16 w-16" action="/logout">
+            <button>
+               <b>
+                <i>
+                    Logout
+                </i>
+               </b> 
+            </button>
+        </form>
+    </nav>
+</header>
 
 
 
-<div style="background-color: aliceblue; z-index:4;" class="flex place-content-center">
+<div style="background-color: rgb(62, 117, 164); z-index:4;" class="flex place-content-center">
 
     <div style="margin-top: 40px;" class="basis-1/8">
 

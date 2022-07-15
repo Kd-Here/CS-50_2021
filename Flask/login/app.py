@@ -20,7 +20,7 @@ def index():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        session["name"] = request.form.get("name")
+        session["name"] = request.form.get("username")
         return redirect("/")
     return render_template("login.html")
 

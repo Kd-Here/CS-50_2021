@@ -1,9 +1,14 @@
 # Learn how to add session and create a db to store user name and password and verfied users should login
 
 from cs50 import SQL 
-from flask import Flask, request, redirect,render_template
+from flask import Flask, render_template_string, request, redirect,render_template,session
+from flask_session import Session
+
 
 app=Flask(__name__)
+
+
+
 
 #Creating a storage i.e db for user order!
 storage=SQL('sqlite:///pepsi_store.db')
@@ -25,6 +30,16 @@ All_Pepsi=[
     "MANGO ADDED SUGAR"
 ]
 
+
+# Configure sessions
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+
+
+
+
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 @app.route('/')
@@ -43,6 +58,25 @@ def ad():
     return redirect('/bookscollection')
 
 
+@app.route('/login',methods=['POST',"GET"])
+def login():
+    if not session.get('name'):
+        return render_template('login.html')
+    return redirect('/logged')
+
+@app.route('/logged',methods=['POST',"GET"])
+def logg():
+    if request.method == "POST":
+        session['name']=request.form.get('username')
+        return redirect('/Showcatlog')
+    return render_template('login.html')
+
+@app.route('/logout',methods=['POST',"GET"])    
+def lgo():
+    session["name"] = None
+    storage.execute('DELETE FROM cart')
+    return redirect("/")
+    
 
 
 
