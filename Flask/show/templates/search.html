@@ -1,0 +1,16 @@
+{%extends "layout.html" %}
+
+{%block body%}
+<ul>
+
+    {% for i in shown %}
+    
+    <li>
+        {{i.title}}
+    </li>
+    {%endfor%}
+    
+
+</ul>
+
+{%endblock%}
