@@ -8,7 +8,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 db=SQL("sqlite:///shows.db")
 
-
 @app.route('/')
 def ad():
     return render_template('index.html')
